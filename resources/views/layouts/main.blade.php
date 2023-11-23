@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie Website</title>
     @vite('resources/css/app.css')
+    <livewire:styles />
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -25,9 +26,7 @@
                 </li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
-                <div class="relative mt-2 md:mt-0">
-                    <input type="text" class="bg-gray-700 rounded-full w-64 px-4 py-1 pl-8 focus:outline-none focus:shadow-outline" placeholder="Search Movie">
-                </div>
+                <livewire:search-dropdown />
                 <div class="md:ml-4 mt-2 md:mt-0">
                     <a href="#">
                         <img src="{{ asset('images/man.png') }}" alt="avatar" class="rounded-full w-8 h-8">
@@ -37,5 +36,6 @@
         </div>
     </nav>
     @yield('content')
+    <livewire:scripts />
 </body>
 </html>
